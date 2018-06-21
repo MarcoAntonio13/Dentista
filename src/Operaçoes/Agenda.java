@@ -1,6 +1,7 @@
 
 
-import Usuarios.*;
+
+import src.Usuarios.*;
 import java.util.Scanner;
 
 public class Agenda {
