@@ -1,6 +1,6 @@
-package Principal;
-import Usuarios.*;
-import Operaçoes.*;
+package src.Principal;
+import src.Usuarios.*;
+import src.Operaçoes.*;
 
 import java.util.Scanner;
 
@@ -32,7 +32,6 @@ public class Principal {
 				op = sc.nextInt();
 				switch(op) {
 					case 1:{						
-						cliente.Cadastrar_Cliente();
 						break;
 					}
 					case 2:{
