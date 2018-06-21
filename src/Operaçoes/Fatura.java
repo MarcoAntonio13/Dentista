@@ -1,10 +1,10 @@
-package Operaçoes;
+package src.Operaçoes;
 public class Fatura {
 
 	private Agenda Agenda;
 	private double Valor;
 	
-	public Fatura(Operaçoes.Agenda agenda) {
+	public Fatura(Agenda agenda) {
 		Agenda = agenda;
 
 	}

@@ -1,4 +1,4 @@
-package Operaçoes;
+package src.Operaçoes;
 
 public class Especialidade {
 	private String Nome;

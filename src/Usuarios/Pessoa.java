@@ -1,4 +1,4 @@
-package Usuarios;
+package src.Usuarios;
 
 public class Pessoa {
 	private String Nome;
