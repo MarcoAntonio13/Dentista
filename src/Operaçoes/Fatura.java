@@ -3,8 +3,9 @@ public class Fatura {
 
 	private Agendamento Agenda;
 	private double Valor;
-	public Fatura(Agendamento agenda) {
+	public Fatura(Agendamento agenda, double valor) {
 		Agenda = agenda;
+		Valor=valor;
 
 	}
 
