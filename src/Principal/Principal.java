@@ -17,7 +17,7 @@ public class Principal {
 		System.out.println("Digete sua senha");
 		Pass = sc.nextLine();
 		
-		if(User.equals("admin") && Pass.equals("123")) {
+		if(User.equals(LOGIN) && Pass.equals(SENHA)) {
 			System.out.println("Bem vindo");
 		}else {
 			System.exit(0);
@@ -75,7 +75,9 @@ public class Principal {
 		*/
 	}
 	
-	public static void main (String []args) {
+	public static void main(String[] args) {
 		Principal.Login();
 	}
+	
+	
 }
