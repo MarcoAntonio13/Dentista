@@ -5,8 +5,21 @@ import src.Operaçoes.*;
 import java.util.Scanner;
 
 public class Principal {
+	
 	private static final String LOGIN = "admin";
 	private static final String SENHA = "123456";
+	private Dentista dentistas[];
+	private Cliente clientes[];
+	private Especialidade especialidades[];
+	private Fatura faturas[];
+	
+	public Principal() {
+		// TODO Auto-generated constructor stub
+		dentistas = new Dentista[100];
+		clientes = new Cliente[100];
+		especialidades = new Especialidade[100];
+		faturas = new Fatura[100];
+	}
 	
 	public void Login() {
 		String User;
@@ -73,6 +86,37 @@ public class Principal {
 		}
 		sc.close();
 		*/
+	}
+	
+	public void menu() {
+		Scanner sc = new Scanner(System.in);
+		int op = 4;
+		while(op != 0) {
+			System.out.println("1 - Cadastrar Cliente");
+			System.out.println("2 - Cadastrar Dentista");
+			System.out.println("3 - Agendar Consulta");
+			System.out.println("0 - Sair");
+			op = sc.nextInt();
+			switch(op) {
+				case 1:{						
+					break;
+				}
+				case 2:{
+
+					break;
+				}
+				case 3:{
+
+					break;
+				}
+				case 0:{
+					System.exit(0);
+					continue;
+				}
+				default:
+					System.out.println("Numero digitado é inválido");
+			}
+		}
 	}
 	
 	public static void main(String[] args) {
