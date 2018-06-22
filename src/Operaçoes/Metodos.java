@@ -7,13 +7,17 @@ import src.Operaçoes.*;
 
 public class Metodos {
 
-	private Cliente clientes[];
-	private int indiceClientes=1;
+	private Especialidade especialidades[];
+	private int indiceExpecialidades;
 	
-	public void agendar() {
-		Scanner sc = new Scanner(System.in);
-		
+	public void listarCliente() {
+		for(int i = 0;  i < indiceExpecialidades; i++) {
+			if(especialidades[i] != null) {
+				System.out.println(i + " " + especialidades[i].getNome());
+			}
+		}
 	}
 	public static void main(String[] arg) {
+		
 	}
 }
