@@ -5,10 +5,24 @@ import src.Operaçoes.*;
 import java.util.Scanner;
 
 public class Principal {
-		
+	private static final String LOGIN = "admin";
+	private static final String SENHA = "123456";
 	
 	public static void Login() {
+		String User;
+		String Pass;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite seu usuario");
+		User = sc.nextLine();
+		System.out.println("Digete sua senha");
+		Pass = sc.nextLine();
 		
+		if(User.equals("admin") && Pass.equals("123")) {
+			System.out.println("Bem vindo");
+		}else {
+			System.exit(0);
+		}
+		/*
 		Cliente cliente = new Cliente();
 		Dentista dentista = new Dentista();
 		Agendamento agenda = new Agendamento();
@@ -58,6 +72,7 @@ public class Principal {
 			System.exit(0);
 		}
 		sc.close();
+		*/
 	}
 	
 	public static void main (String []args) {
