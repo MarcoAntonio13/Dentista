@@ -1,15 +1,20 @@
 package src.Operaçoes;
+import src.Usuarios.*;
+import src.Operaçoes.*;
 
 public class Metodos {
 
+	private Cliente clientes[];
+	private int indiceClientes=0;
+	
 	public void listaCliente() {
-		for(int i = 0;  i < 100; i++) {
-			//if() {
-				
-			//}
+		for(int i = 0;  i < indiceClientes; i++) {
+			if(clientes[i] != null) {
+				System.out.println(i + " " + clientes[i]);
+			}
 		}
 	}
-	public static void main(String arg[]) {
+	public static void main(String[] arg) {
 		Metodos metodos = new Metodos();
 		metodos.listaCliente();
 	}
