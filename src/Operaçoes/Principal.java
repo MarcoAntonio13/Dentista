@@ -100,15 +100,16 @@ public class Principal {
 			System.out.println("0 - Sair");
 			op = sc.nextInt();
 			switch(op) {
-				case 1:{						
+				case 1:{	
+					System.out.println("Cadastro de cliente");
 					break;
 				}
 				case 2:{
-
+					System.out.println("Cadastro de dentista");
 					break;
 				}
 				case 3:{
-
+					System.out.println("Agendamento de consulta");
 					break;
 				}
 				case 0:{
@@ -124,6 +125,7 @@ public class Principal {
 	public static void main(String[] args) {
 		Principal principal = new Principal();
 		principal.Login();
+		principal.menu();
 	}
 	
 }
