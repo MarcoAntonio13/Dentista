@@ -28,7 +28,7 @@ public class Rafael {
 	public void listarFatura() {
 		for(int v = 0;  v < indiceFaturas; v++) {
 			if(faturas[v] != null) {
-				System.out.println(v + " " + faturas[v].Agenda.getEspecialidade().getValor());
+				System.out.println(v + " " + faturas[v].getValor());
 				
 				
 			}
