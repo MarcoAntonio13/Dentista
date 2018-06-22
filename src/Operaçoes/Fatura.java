@@ -3,7 +3,7 @@ public class Fatura {
 
 	private Agendamento Agenda;
 	private double Valor;
-	
+	//jyjfyffjyyfjgj
 	public Fatura(Agendamento agenda) {
 		Agenda = agenda;
 
