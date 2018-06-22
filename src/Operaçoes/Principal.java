@@ -12,6 +12,9 @@ public class Principal {
 	private Cliente clientes[];
 	private Especialidade especialidades[];
 	private Fatura faturas[];
+	private int indiceClientes=0;
+	private int indiceDentista=0;
+	private int indiceEspecialidades=0;
 	
 	public Principal() {
 		// TODO Auto-generated constructor stub
@@ -102,6 +105,7 @@ public class Principal {
 			switch(op) {
 				case 1:{	
 					System.out.println("Cadastro de cliente");
+					cadastrarCliente();
 					break;
 				}
 				case 2:{
@@ -120,6 +124,22 @@ public class Principal {
 					System.out.println("Numero digitado é inválido");
 			}
 		}
+	}
+	
+	public void cadastrarCliente() {
+		Scanner sc = new Scanner(System.in);
+		String nome;
+		String cpf;
+		String endereco;
+		System.out.println("Digite o nome do cliente:");
+		nome = sc.nextLine();
+		System.out.println("Digite o CPF do cliente: ");
+		cpf = sc.nextLine();
+		System.out.println("Digite o endereço do cliente: ");
+		endereco = sc.nextLine();
+		sc.next();
+		clientes[indiceClientes] = new Cliente(nome, cpf, endereco);
+		indiceClientes++;
 	}
 	
 	public static void main(String[] args) {

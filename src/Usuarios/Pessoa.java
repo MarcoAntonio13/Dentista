@@ -7,6 +7,15 @@ public class Pessoa {
 	public Pessoa() {
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public Pessoa(String nome, String cpf) {
+		Nome = nome;
+		CPF = cpf;
+	}
+
+
 
 	public String getNome() {
 		return Nome;

@@ -10,6 +10,15 @@ public class Cliente extends Pessoa {
 		// TODO Auto-generated constructor stub
 	}
 	
+	public Cliente(String nome, String cpf, String endereco) {
+		super(nome, cpf);
+		Endereco = endereco;
+	}
+
+
+
+
+
 	public String getEndereco() {
 		return Endereco;
 	}
