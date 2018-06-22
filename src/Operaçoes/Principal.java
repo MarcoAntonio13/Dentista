@@ -156,7 +156,7 @@ public class Principal {
 		if (agendamento.getEspecialidade().getValor() > 500) {
 			faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() * 0.9);
 			indiceFaturas++;
-		}
+		}//fdsf
 
 		else {
 		faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() );
