@@ -25,13 +25,14 @@ public class Principal {
 		String User;
 		String Pass;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite seu usuario");
+		System.out.println("Consultório Odontológico\n");
+		System.out.println("Digite seu Usuario");
 		User = sc.nextLine();
-		System.out.println("Digete sua senha");
+		System.out.println("Digite sua Senha");
 		Pass = sc.nextLine();
 		
 		if(User.equals(LOGIN) && Pass.equals(SENHA)) {
-			System.out.println("Bem vindo");
+			System.out.println("Bem Vindo!!!");
 		}else {
 			System.exit(0);
 		}
@@ -43,19 +44,20 @@ public class Principal {
 		String User;
 		String Pass;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite seu usuario");
+		System.out.println("Consultório Odontológico\n");
+		System.out.println("Digite o seu Usuario");
 		User = sc.nextLine();
-		System.out.println("Digete sua senha");
+		System.out.println("Digite a sua Senha");
 		Pass = sc.nextLine();
 		
 		if(User.equals("admin") && Pass.equals("123")) {
-			System.out.println("Bem vindo");
+			System.out.println("Bem Vindo");
 			int op = 4;
 			while(op != 0) {
-				System.out.println("1 - Cadastrar Cliente");
-				System.out.println("2 - Cadastrar Dentista");
-				System.out.println("3 - Agendar Consulta");
-				System.out.println("0 - Sair");
+				System.out.println("[1] - Cadastrar Cliente");
+				System.out.println("[2] - Cadastrar Dentista");
+				System.out.println("[3] - Agendar Consulta");
+				System.out.println("[0] - Sair");
 				op = sc.nextInt();
 				switch(op) {
 					case 1:{						
@@ -76,12 +78,12 @@ public class Principal {
 						continue;
 					}
 					default:
-						System.out.println("Numero digitado é inválido");
+						System.out.println("Número Digitado é Inválido");
 				}
 			}
 			
 		}else {
-			System.out.println("Senha ou usuário incorretos....");
+			System.out.println("Senha ou Usuário Inválidos....");
 			System.exit(0);
 		}
 		sc.close();
