@@ -6,7 +6,7 @@ public class Dentista extends Pessoa {
 
 	private String Especialidade;
 	
-	public Dentista() {
+	public Dentista(String nome, String cpf, String especialidade2) {
 		// TODO Auto-generated constructor stub
 	}
 	

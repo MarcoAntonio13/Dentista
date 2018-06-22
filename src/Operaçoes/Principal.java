@@ -150,6 +150,23 @@ public class Principal {
 		indiceClientes++;
 	}
 	
+	
+	public void cadastrarDentista() {
+		Scanner sc = new Scanner(System.in);
+		String nome;
+		String cpf;
+		String especialidade;
+		System.out.println("Digite o nome do dentista:");
+		nome = sc.nextLine();
+		System.out.println("Digite o CPF do dentista: ");
+		cpf = sc.nextLine();
+		System.out.println("Digite a especialidade do dentista: ");
+		especialidade = sc.nextLine();
+		sc.next();
+		dentistas[indiceDentista] = new Dentista(nome, cpf, especialidade);
+		indiceClientes++;
+	}
+	
 	public void gerarFatura(Agendamento agendamento) {
 		Scanner scanner = new Scanner(System.in);
 		
