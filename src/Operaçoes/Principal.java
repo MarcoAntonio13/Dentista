@@ -88,6 +88,37 @@ public class Principal {
 		*/
 	}
 	
+	public void menu() {
+		Scanner sc = new Scanner(System.in);
+		int op = 4;
+		while(op != 0) {
+			System.out.println("1 - Cadastrar Cliente");
+			System.out.println("2 - Cadastrar Dentista");
+			System.out.println("3 - Agendar Consulta");
+			System.out.println("0 - Sair");
+			op = sc.nextInt();
+			switch(op) {
+				case 1:{						
+					break;
+				}
+				case 2:{
+
+					break;
+				}
+				case 3:{
+
+					break;
+				}
+				case 0:{
+					System.exit(0);
+					continue;
+				}
+				default:
+					System.out.println("Numero digitado é inválido");
+			}
+		}
+	}
+	
 	public static void main(String[] args) {
 		Principal principal = new Principal();
 		principal.Login();
