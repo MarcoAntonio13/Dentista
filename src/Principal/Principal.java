@@ -11,7 +11,7 @@ public class Principal {
 		
 		Cliente cliente = new Cliente();
 		Dentista dentista = new Dentista();
-		Agenda agenda = new Agenda();
+		Agendamento agenda = new Agendamento();
 		Fatura fatura;
 		String User;
 		String Pass;

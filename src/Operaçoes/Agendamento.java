@@ -2,7 +2,7 @@ package src.Operaçoes;
 import src.Usuarios.*;
 import java.util.Scanner;
 //Oi
-public class Agenda {
+public class Agendamento {
 
 	
 	private Cliente Cliente;
@@ -10,7 +10,7 @@ public class Agenda {
 	private String Data;
 	private Especialidade Especialidade;
 	
-	public Agenda() {
+	public Agendamento() {
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -54,12 +54,5 @@ public class Agenda {
 		this.Data = sc.nextLine();
 		this.Cliente = cliente;
 		this.Dentista = dentista;
-	}
-	public static void main(String[]args) {
-		Cliente cl = new Cliente();
-		Dentista dn = new Dentista();
-		Agenda ag = new Agenda();
-		
-		ag.Agendar(cl, dn);
 	}
 }

@@ -1,10 +1,10 @@
 package src.Operaçoes;
 public class Fatura {
 
-	private Agenda Agenda;
+	private Agendamento Agenda;
 	private double Valor;
 	
-	public Fatura(Agenda agenda) {
+	public Fatura(Agendamento agenda) {
 		Agenda = agenda;
 
 	}
