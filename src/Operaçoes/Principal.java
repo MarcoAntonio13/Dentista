@@ -13,8 +13,9 @@ public class Principal {
 	private Especialidade especialidades[];
 	private Fatura faturas[];
 	private int indiceClientes=0;
-	private int indiceDentista=0;
+	private int indiceDentistas=0;
 	private int indiceEspecialidades=0;
+	private int indiceFaturas=0;
 	
 	public Principal() {
 		// TODO Auto-generated constructor stub
@@ -163,8 +164,8 @@ public class Principal {
 		System.out.println("Digite a especialidade do dentista: ");
 		especialidade = sc.nextLine();
 		sc.next();
-		dentistas[indiceDentista] = new Dentista(nome, cpf, especialidade);
-		indiceClientes++;
+		dentistas[indiceDentistas] = new Dentista(nome, cpf, especialidade);
+		indiceDentistas++;
 	}
 	
 	public void gerarFatura(Agendamento agendamento) {
@@ -175,6 +176,25 @@ public class Principal {
 	public void agendar() {
 		Scanner sc = new Scanner(System.in);
 		
+	}
+	
+	public void listarFatura() {
+		for(int v = 0;  v < indiceFaturas; v++) {
+			if(faturas[v] != null) {
+				System.out.println(v + " " + faturas[v].getValor());
+				
+				
+			}
+			
+		}
+	}
+	
+	public void listarDentista() {
+		for(int p = 0;  p < indiceDentistas; p++) {
+			if(dentistas[p] != null) {
+				System.out.println(p + " " + dentistas[p].getNome());
+			}
+		}
 	}
 	
 	public static void main(String[] args) {
