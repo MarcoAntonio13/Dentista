@@ -23,12 +23,12 @@ public class Rafael {
 	
 	//Arrumar Metodo Fatura
 	private Fatura faturas[];
-	private int indiceFaturas=0;
+	private int indiceFaturas=1;
 	
 	public void listarFatura() {
 		for(int v = 0;  v < indiceFaturas; v++) {
 			if(faturas[v] != null) {
-				System.out.println(v + " " + faturas[v].getValor());
+				System.out.println(v + " " + faturas[v].Agenda.getEspecialidade().getValor());
 				
 				
 			}

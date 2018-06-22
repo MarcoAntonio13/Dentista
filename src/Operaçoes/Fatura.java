@@ -3,10 +3,33 @@ public class Fatura {
 
 	private Agendamento Agenda;
 	private double Valor;
-	//jyjfyffjyyfjgj
 	public Fatura(Agendamento agenda) {
 		Agenda = agenda;
 
+	}
+
+
+
+	public Agendamento getAgenda() {
+		return Agenda;
+	}
+
+
+
+	public void setAgenda(Agendamento agenda) {
+		Agenda = agenda;
+	}
+
+
+
+	public double getValor() {
+		return Valor;
+	}
+
+
+
+	public void setValor(double valor) {
+		Valor = valor;
 	}
 
 
