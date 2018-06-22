@@ -11,7 +11,7 @@ public class Pessoa {
 	public String getNome() {
 		return Nome;
 	}
-//fvtgkk
+
 	public void setNome(String nome) {
 		Nome = nome;
 	}

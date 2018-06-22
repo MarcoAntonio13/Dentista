@@ -2,7 +2,7 @@ package src.Usuarios;
 
 import java.util.Scanner;
 
-public class Dentista {
+public class Dentista extends Pessoa{
 
 	private int Id_Dentista;
 	private String Nome;
