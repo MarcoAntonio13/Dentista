@@ -142,6 +142,16 @@ public class Principal {
 		indiceClientes++;
 	}
 	
+	public void gerarFatura(Agendamento agendamento) {
+		Scanner scanner = new Scanner(System.in);
+		
+	}
+	
+	public void agendar() {
+		Scanner sc = new Scanner(System.in);
+		
+	}
+	
 	public static void main(String[] args) {
 		Principal principal = new Principal();
 		principal.Login();
