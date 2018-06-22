@@ -1,4 +1,4 @@
-package src.Principal;
+package src.Operaçoes;
 import src.Usuarios.*;
 import src.Operaçoes.*;
 
@@ -78,6 +78,5 @@ public class Principal {
 	public static void main(String[] args) {
 		Principal.Login();
 	}
-	
 	
 }
