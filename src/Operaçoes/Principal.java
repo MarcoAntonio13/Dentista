@@ -5,8 +5,21 @@ import src.Operaçoes.*;
 import java.util.Scanner;
 
 public class Principal {
+	
 	private static final String LOGIN = "admin";
 	private static final String SENHA = "123456";
+	private Dentista dentistas[];
+	private Cliente clientes[];
+	private Especialidade especialidades[];
+	private Fatura faturas[];
+	
+	public Principal() {
+		// TODO Auto-generated constructor stub
+		dentistas = new Dentista[100];
+		clientes = new Cliente[100];
+		especialidades = new Especialidade[100];
+		faturas = new Fatura[100];
+	}
 	
 	public void Login() {
 		String User;
