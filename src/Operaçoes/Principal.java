@@ -12,10 +12,10 @@ public class Principal {
 	private Cliente clientes[];
 	private Especialidade especialidades[];
 	private Fatura faturas[];
-	private int indiceClientes=0;
-	private int indiceDentistas=0;
-	private int indiceEspecialidades=0;
-	private int indiceFaturas=0;
+	private int indiceClientes=1;
+	private int indiceDentistas=1;
+	private int indiceEspecialidades=1;
+	private int indiceFaturas=1;
 	
 	public Principal() {
 		// TODO Auto-generated constructor stub
@@ -29,6 +29,14 @@ public class Principal {
 		for(int i = 0;  i < indiceClientes; i++) {
 			if(clientes[i] != null) {
 				System.out.println(i + " " + clientes[i].getNome());
+			}
+		}
+	}
+	
+	public void listarExpecialidades() {
+		for(int i = 0;  i < indiceEspecialidades; i++) {
+			if(especialidades[i] != null) {
+				System.out.println(i + " " + especialidades[i].getNome());
 			}
 		}
 	}
