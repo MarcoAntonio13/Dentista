@@ -8,7 +8,7 @@ public class Principal {
 	private static final String LOGIN = "admin";
 	private static final String SENHA = "123456";
 	
-	public static void Login() {
+	public void Login() {
 		String User;
 		String Pass;
 		Scanner sc = new Scanner(System.in);
@@ -76,7 +76,8 @@ public class Principal {
 	}
 	
 	public static void main(String[] args) {
-		Principal.Login();
+		Principal principal = new Principal();
+		principal.Login();
 	}
 	
 }
