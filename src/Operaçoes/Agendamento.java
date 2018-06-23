@@ -14,6 +14,18 @@ public class Agendamento {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public Agendamento(src.Usuarios.Cliente cliente, src.Usuarios.Dentista dentista, String data,
+	        src.Operaçoes.Especialidade especialidade) {
+		Cliente = cliente;
+		Dentista = dentista;
+		Data = data;
+		Especialidade = especialidade;
+	}
+
+
+
 	public Cliente getCliente() {
 		return Cliente;
 	}
