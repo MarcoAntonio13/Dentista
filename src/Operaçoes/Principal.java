@@ -91,6 +91,8 @@ public class Principal {
 			System.out.println("[3] - Agendar Consulta");
 			System.out.println("[4] - Listar Clientes");
 			System.out.println("[5] - Listar Dentistas");
+			System.out.println("[6] - Listar Faturas");
+			System.out.println("[7] - Editar Clientes");
 			System.out.println("[0] - Sair");
 			op = sc.nextInt();
 			switch (op) {
@@ -122,6 +124,10 @@ public class Principal {
 			case 6: {
 				System.out.println("Listar Faturas ");
 				listarFatura();
+				break;
+			}
+			case 7: {
+				System.out.println("Editar Clientes");
 				break;
 			}
 			case 0: {
