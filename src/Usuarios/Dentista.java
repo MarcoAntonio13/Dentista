@@ -6,8 +6,9 @@ public class Dentista extends Pessoa {
 
 	private String Especialidade;
 	
-	public Dentista(String nome, String cpf, String especialidade2) {
-		// TODO Auto-generated constructor stub
+	public Dentista(String nome, String cpf, String especialidade) {
+		super(nome, cpf);
+		Especialidade = especialidade;
 	}
 	
 	public String getEspecialidade() {

@@ -13,10 +13,10 @@ public class Principal {
 	private Cliente clientes[];
 	private Especialidade especialidades[];
 	private Fatura faturas[];
-	private int indiceClientes = 1;
-	private int indiceDentistas = 1;
-	private int indiceEspecialidades = 1;
-	private int indiceFaturas = 1;
+	private int indiceClientes = 0;
+	private int indiceDentistas = 0;
+	private int indiceEspecialidades = 0;
+	private int indiceFaturas = 0;
 
 	public Principal() {
 		// TODO Auto-generated constructor stub
@@ -88,11 +88,12 @@ public class Principal {
 		while (op != 0) {
 			System.out.println("[1] - Cadastrar Cliente");
 			System.out.println("[2] - Cadastrar Dentista");
-			System.out.println("[3] - Agendar Consulta");
-			System.out.println("[4] - Listar Clientes");
-			System.out.println("[5] - Listar Dentistas");
-			System.out.println("[6] - Listar Faturas");
-			System.out.println("[7] - Editar Clientes");
+			System.out.println("[3] - Cadastrar Especialidade");
+			System.out.println("[4] - Agendar Consulta");
+			System.out.println("[5] - Listar Clientes");
+			System.out.println("[6] - Listar Dentistas");
+			System.out.println("[7] - Listar Faturas");
+			System.out.println("[8] - Editar Clientes");
 			System.out.println("[0] - Sair");
 			op = sc.nextInt();
 			switch (op) {
@@ -107,26 +108,31 @@ public class Principal {
 				break;
 			}
 			case 3: {
+				System.out.println("Cadastro de Especialidade");
+				cadastrarEspecialidade();
+				break;
+			}
+			case 4: {
 				System.out.println("Agendamento de Consulta");
 				agendar();
 				break;
 			}
-			case 4: {
+			case 5: {
 				System.out.println("Listar Clientes ");
 				listarCliente();
 				break;
 			}
-			case 5: {
+			case 6: {
 				System.out.println("Listar Dentistas ");
 				listarDentista();
 				break;
 			}
-			case 6: {
+			case 7: {
 				System.out.println("Listar Faturas ");
 				listarFatura();
 				break;
 			}
-			case 7: {
+			case 8: {
 				System.out.println("Editar Clientes");
 				break;
 			}
@@ -171,6 +177,19 @@ public class Principal {
 		dentistas[indiceDentistas] = new Dentista(nome, cpf, especialidade);
 		indiceDentistas++;
 	}
+	
+	public void cadastrarEspecialidade() {
+		Scanner sc = new Scanner(System.in);
+		String nome;
+		double valor;
+		System.out.println("\nDigite o nome da especialidade:");
+		nome = sc.nextLine();
+		System.out.println("Digite o valor da especialidade: ");
+		valor = sc.nextDouble();
+
+		especialidades[indiceEspecialidades] = new Especialidade(nome, valor);
+		indiceEspecialidades++;
+	}
 
 	public void gerarFatura(Agendamento agendamento) {
 		System.out.println("Fatura:");
@@ -210,7 +229,7 @@ public class Principal {
 		System.out.println("Escolha a especialidade do dentista: ");
 		listarEspecialidades();
 		opcao = sc.nextInt();
-		sc.next();
+		sc.nextInt();
 		especialidade = especialidades[opcao];
 		System.out.println("Digite o dia da consulta: ");
 		data = sc.nextLine();
