@@ -85,29 +85,37 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		int op = 7;
 		while (op != 0) {
-			System.out.println("1 - Cadastrar Cliente");
-			System.out.println("2 - Cadastrar Dentista");
-			System.out.println("3 - Agendar Consulta");
-			System.out.println("0 - Sair");
+			System.out.println("[1] - Cadastrar Cliente");
+			System.out.println("[2] - Cadastrar Dentista");
+			System.out.println("[3] - Agendar Consulta");
+			System.out.println("[4] - Listar Clientes");
+			System.out.println("[5] - Listar Dentistas");
+			System.out.println("[0] - Sair");
 			op = sc.nextInt();
 			switch (op) {
 			case 1: {
-				System.out.println("Cadastro de cliente");
+				System.out.println("Cadastro de Cliente");
 				cadastrarCliente();
 				break;
 			}
 			case 2: {
-				System.out.println("Cadastro de dentista");
+				System.out.println("Cadastro de Dentista");
 				cadastrarDentista();
-				break;//fhyh
+				break;
 			}
 			case 3: {
-				System.out.println("Agendamento de consulta");
+				System.out.println("Agendamento de Consulta");
 				agendar();
 				break;
 			}
 			case 4: {
-				System.out.println("Listar clientes ");
+				System.out.println("Listar Clientes ");
+				listarCliente();
+				break;
+			}
+			case 5: {
+				System.out.println("Listar Dentistas ");
+				listarDentista();
 				break;
 			}
 			case 0: {
@@ -115,7 +123,7 @@ public class Principal {
 				continue;
 			}
 			default:
-				System.out.println("Numero digitado é inválido");
+				System.out.println("Número digitado é Inválido");
 			}
 		}
 	}
@@ -125,11 +133,11 @@ public class Principal {
 		String nome;
 		String cpf;
 		String endereco;
-		System.out.println("Digite o nome do cliente:");
+		System.out.println("Digite o nome do Cliente:");
 		nome = sc.nextLine();
-		System.out.println("Digite o CPF do cliente: ");
+		System.out.println("Digite o CPF do Cliente: ");
 		cpf = sc.nextLine();
-		System.out.println("Digite o endereço do cliente: ");
+		System.out.println("Digite o endereço do Cliente: ");
 		endereco = sc.nextLine();
 		sc.next();
 		clientes[indiceClientes] = new Cliente(nome, cpf, endereco);
