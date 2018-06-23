@@ -99,7 +99,7 @@ public class Principal {
 			case 2: {
 				System.out.println("Cadastro de dentista");
 				cadastrarDentista();
-				break;
+				break;//fhyh
 			}
 			case 3: {
 				System.out.println("Agendamento de consulta");
