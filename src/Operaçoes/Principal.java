@@ -107,7 +107,7 @@ public class Principal {
 				break;
 			}
 			case 4: {
-				System.out.println("Listar clientes");
+				System.out.println("Listar clientes ");
 				break;
 			}
 			case 0: {
