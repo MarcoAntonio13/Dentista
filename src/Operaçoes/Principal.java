@@ -46,10 +46,10 @@ public class Principal {
 		String User;
 		String Pass;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Consultório Odontológico\n");
-		System.out.println("Digite seu Usuario");
+		System.out.println("[Consultório Odontológico]\n");
+		System.out.println("Digite seu Usuario:");
 		User = sc.nextLine();
-		System.out.println("Digite sua Senha");
+		System.out.println("Digite sua Senha:");
 		Pass = sc.nextLine();
 
 		if (User.equals(LOGIN) && Pass.equals(SENHA)) {
@@ -133,7 +133,7 @@ public class Principal {
 		String nome;
 		String cpf;
 		String endereco;
-		System.out.println("Digite o nome do Cliente:");
+		System.out.println("\nDigite o nome do Cliente:");
 		nome = sc.nextLine();
 		System.out.println("Digite o CPF do Cliente: ");
 		cpf = sc.nextLine();
@@ -149,7 +149,7 @@ public class Principal {
 		String nome;
 		String cpf;
 		String especialidade;
-		System.out.println("Digite o nome do dentista:");
+		System.out.println("\nDigite o nome do dentista:");
 		nome = sc.nextLine();
 		System.out.println("Digite o CPF do dentista: ");
 		cpf = sc.nextLine();
