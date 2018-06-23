@@ -45,8 +45,8 @@ public class Agendamento {
 		Scanner sc = new Scanner(System.in);
 		int escolha_especialidade;
 		Especialidade spcs[] = {new Especialidade("Consulta", 400.00), new Especialidade("Canal", 600.00),new Especialidade("Limpeza", 450.00)};
-		System.out.println("Digite o número correspondente a sua necessidade Odontologica");
-		System.out.println("[1] - Consulta \n [2] - Canal \n [3] - Limpeza ");
+		System.out.println("Digite o número correspondente a sua Necessidade Odontologica");
+		System.out.println(" [1] - Consulta \n [2] - Canal \n [3] - Limpeza ");
 		
 		escolha_especialidade = sc.nextInt();
 		this.Especialidade = spcs[escolha_especialidade-1];
