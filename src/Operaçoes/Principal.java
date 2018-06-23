@@ -139,7 +139,7 @@ public class Principal {
 		cpf = sc.nextLine();
 		System.out.println("Digite o endereço do Cliente: ");
 		endereco = sc.nextLine();
-		sc.next();
+	
 		clientes[indiceClientes] = new Cliente(nome, cpf, endereco);
 		indiceClientes++;
 	}
@@ -155,7 +155,7 @@ public class Principal {
 		cpf = sc.nextLine();
 		System.out.println("Digite a especialidade do dentista: ");
 		especialidade = sc.nextLine();
-		sc.next();
+		
 		dentistas[indiceDentistas] = new Dentista(nome, cpf, especialidade);
 		indiceDentistas++;
 	}
