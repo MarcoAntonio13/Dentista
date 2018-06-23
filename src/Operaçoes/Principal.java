@@ -55,6 +55,7 @@ public class Principal {
 		if (User.equals(LOGIN) && Pass.equals(SENHA)) {
 			System.out.println("Bem Vindo!!!");
 		} else {
+			System.out.println("Login Inválido");
 			System.exit(0);
 		}
 		/*
