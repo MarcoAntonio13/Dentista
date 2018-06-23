@@ -83,7 +83,7 @@ public class Principal {
 
 	public void menu() {
 		Scanner sc = new Scanner(System.in);
-		int op = 4;
+		int op = 7;
 		while (op != 0) {
 			System.out.println("1 - Cadastrar Cliente");
 			System.out.println("2 - Cadastrar Dentista");
@@ -98,10 +98,16 @@ public class Principal {
 			}
 			case 2: {
 				System.out.println("Cadastro de dentista");
+				cadastrarDentista();
 				break;
 			}
 			case 3: {
 				System.out.println("Agendamento de consulta");
+				agendar();
+				break;
+			}
+			case 4: {
+				System.out.println("Listar clientes");
 				break;
 			}
 			case 0: {
