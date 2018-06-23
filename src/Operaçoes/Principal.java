@@ -118,6 +118,11 @@ public class Principal {
 				listarDentista();
 				break;
 			}
+			case 6: {
+				System.out.println("Listar Faturas ");
+				listarFatura();
+				break;
+			}
 			case 0: {
 				System.exit(0);
 				continue;
