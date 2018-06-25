@@ -202,6 +202,7 @@ public class Principal {
 		System.out.println("Valor: " + agendamento.getEspecialidade().getValor());
 		if (agendamento.getEspecialidade().getValor() > 500) {
 			faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() * 0.9);
+			System.out.println("Valor com desconto de 10%: "+faturas[indiceFaturas].getValor());
 			indiceFaturas++;
 		}
 
@@ -233,8 +234,9 @@ public class Principal {
 		opcao = sc.nextInt();
 		especialidade = especialidades[opcao];
 		System.out.println("Digite o dia da consulta: ");
-		data = sc.nextLine();
-		sc.next();
+		data = sc.next();
+		System.out.println("Voce digitou: "+data);
+		
 		agendamento = new Agendamento(cliente, dentista, data, especialidade);
 		gerarFatura(agendamento);
 		
