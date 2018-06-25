@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class Dentista extends Pessoa {
 
-	private String Especialidade;
+	private String CRO;
 	
-	public Dentista(String nome, String cpf, String especialidade) {
+	public Dentista(String nome, String cpf, String cro) {
 		super(nome, cpf);
-		Especialidade = especialidade;
+		CRO = cro;
 	}
 	
-	public String getEspecialidade() {
-		return Especialidade;
+	public String getCro() {
+		return CRO;
 	}
-	public void setEspecialidade(String especialidade) {
-		Especialidade = especialidade;
+	public void setCro(String cro) {
+		CRO = cro;
 	}
 	
 	@Override

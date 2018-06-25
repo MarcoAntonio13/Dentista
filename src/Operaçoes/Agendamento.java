@@ -53,7 +53,7 @@ public class Agendamento {
 		Especialidade = especialidade;
 	}
 	
-	public void Agendar(Cliente cliente, Dentista dentista) {
+	/*public void Agendar(Cliente cliente, Dentista dentista) {
 		Scanner sc = new Scanner(System.in);
 		int escolha_especialidade;
 		Especialidade spcs[] = {new Especialidade("Consulta", 400.00), new Especialidade("Canal", 600.00),new Especialidade("Limpeza", 450.00)};
@@ -67,5 +67,5 @@ public class Agendamento {
 		this.Data = sc.nextLine();
 		this.Cliente = cliente;
 		this.Dentista = dentista;
-	}
+	}*/
 }

@@ -26,21 +26,7 @@ public class Principal {
 		faturas = new Fatura[100];
 	}
 
-	public void listarCliente() {
-		for (int i = 0; i < indiceClientes; i++) {
-			if (clientes[i] != null) {
-				System.out.println(i + " " + clientes[i].getNome());
-			}
-		}
-	}
-
-	public void listarEspecialidades() {
-		for (int i = 0; i < indiceEspecialidades; i++) {
-			if (especialidades[i] != null) {
-				System.out.println(i + " " + especialidades[i].getNome());
-			}
-		}
-	}
+	
 
 	public void Login() {
 		String User;
@@ -93,7 +79,10 @@ public class Principal {
 			System.out.println("[5] - Listar Clientes");
 			System.out.println("[6] - Listar Dentistas");
 			System.out.println("[7] - Listar Faturas");
-			System.out.println("[8] - Editar Clientes");
+			System.out.println("[8] - Listar Especialidades");
+			System.out.println("[9] - Editar Clientes");
+			System.out.println("[10] - Editar Dentistas");
+			System.out.println("[11] - Editar Especialidades");
 			System.out.println("[0] - Sair");
 			op = sc.nextInt();
 			switch (op) {
@@ -133,7 +122,20 @@ public class Principal {
 				break;
 			}
 			case 8: {
+				System.out.println("Listar Especialidades ");
+				listarEspecialidades();
+				break;
+			}
+			case 9: {
 				System.out.println("Editar Clientes");
+				break;
+			}
+			case 10: {
+				System.out.println("Editar Dentistas");
+				break;
+			}
+			case 11: {
+				System.out.println("Editar Especialidades");
 				break;
 			}
 			case 0: {
@@ -161,34 +163,34 @@ public class Principal {
 		clientes[indiceClientes] = new Cliente(nome, cpf, endereco);
 		indiceClientes++;
 	}
-
-	public void cadastrarDentista() {
-		Scanner sc = new Scanner(System.in);
-		String nome;
-		String cpf;
-		String especialidade;
-		System.out.println("\nDigite o nome do dentista:");
-		nome = sc.nextLine();
-		System.out.println("Digite o CPF do dentista: ");
-		cpf = sc.nextLine();
-		System.out.println("Digite a especialidade do dentista: ");
-		especialidade = sc.nextLine();
-		
-		dentistas[indiceDentistas] = new Dentista(nome, cpf, especialidade);
-		indiceDentistas++;
-	}
 	
 	public void cadastrarEspecialidade() {
 		Scanner sc = new Scanner(System.in);
 		String nome;
 		double valor;
-		System.out.println("\nDigite o nome da especialidade:");
+		System.out.println("\nDigite o nome da Especialidade:");
 		nome = sc.nextLine();
-		System.out.println("Digite o valor da especialidade: ");
+		System.out.println("Digite o valor da  Especialidade: ");
 		valor = sc.nextDouble();
-
+	
 		especialidades[indiceEspecialidades] = new Especialidade(nome, valor);
 		indiceEspecialidades++;
+	}
+
+	public void cadastrarDentista() {
+		Scanner sc = new Scanner(System.in);
+		String nome;
+		String cpf;
+		String cro;
+		System.out.println("\nDigite o nome do dentista:");
+		nome = sc.nextLine();
+		System.out.println("Digite o CPF do dentista: ");
+		cpf = sc.nextLine();
+		System.out.println("Digite a CRO do dentista: ");
+		cro = sc.nextLine();
+		
+		dentistas[indiceDentistas] = new Dentista(nome, cpf, cro);
+		indiceDentistas++;
 	}
 
 	public void gerarFatura(Agendamento agendamento) {
@@ -201,7 +203,7 @@ public class Principal {
 		if (agendamento.getEspecialidade().getValor() > 500) {
 			faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() * 0.9);
 			indiceFaturas++;
-		}//fdsf
+		}
 
 		else {
 		faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() );
@@ -229,15 +231,31 @@ public class Principal {
 		System.out.println("Escolha a especialidade do dentista: ");
 		listarEspecialidades();
 		opcao = sc.nextInt();
-		sc.nextInt();
 		especialidade = especialidades[opcao];
 		System.out.println("Digite o dia da consulta: ");
 		data = sc.nextLine();
+		sc.next();
 		agendamento = new Agendamento(cliente, dentista, data, especialidade);
 		gerarFatura(agendamento);
 		
 	}
 
+	public void listarCliente() {
+		for (int i = 0; i < indiceClientes; i++) {
+			if (clientes[i] != null) {
+				System.out.println(i + " " + clientes[i].getNome());
+			}
+		}
+	}
+
+	public void listarEspecialidades() {
+		for (int i = 0; i < indiceEspecialidades; i++) {
+			if (especialidades[i] != null) {
+				System.out.println(i + " " + especialidades[i].getNome());
+			}
+		}
+	}
+	
 	public void listarFatura() {
 		for (int v = 0; v < indiceFaturas; v++) {
 			if (faturas[v] != null) {
