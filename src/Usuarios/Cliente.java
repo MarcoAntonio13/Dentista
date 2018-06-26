@@ -24,9 +24,8 @@ public class Cliente extends Pessoa {
 	}
 	
 	@Override
-	public void editar(String Nome, String CPF) {
-		// TODO Auto-generated method stub
-		super.editar(Nome, CPF);
+	public void editar(String endereco) {
+		this.Endereco = endereco;
 	}
 	
 }

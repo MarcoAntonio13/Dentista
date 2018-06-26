@@ -8,15 +8,11 @@ public class Pessoa {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-
 	public Pessoa(String nome, String cpf) {
 		Nome = nome;
 		CPF = cpf;
 	}
-
-
-
+	
 	public String getNome() {
 		return Nome;
 	}
@@ -33,9 +29,8 @@ public class Pessoa {
 		CPF = cPF;
 	}
 	
-	public void editar(String Nome , String CPF) {
-		this.Nome = Nome;
-		this.CPF = CPF;
+	public void editar(String nome) {
+		this.Nome = nome;
 	}
 	
 	

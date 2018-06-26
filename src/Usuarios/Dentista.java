@@ -18,10 +18,5 @@ public class Dentista extends Pessoa {
 		CRO = cro;
 	}
 	
-	@Override
-	public void editar(String Nome, String CPF) {
-		super.editar(Nome, CPF);
-	}
-	
 	
 }
