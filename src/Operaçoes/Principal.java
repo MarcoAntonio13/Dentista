@@ -205,7 +205,7 @@ public class Principal {
 			System.out.println("Valor com desconto de 10%: "+faturas[indiceFaturas].getValor());
 			indiceFaturas++;
 		}
-
+		
 		else {
 		faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() );
 			indiceFaturas++;
