@@ -276,12 +276,12 @@ public class Principal {
 		int opcao;
 		System.out.println("Escolha o cliente: ");
 		listarCliente();
-		opcao = sc.nextInt();
+		opcao = Integer.parseInt(sc.nextLine());
 		System.out.println("Digite o novo endereço: ");
-		clientes[opcao].editar(sc.next());
+		clientes[opcao].editar(sc.nextLine());
 		System.out.println("Cliente editado com sucesso!");
 	}
-
+	
 	public static void main(String[] args) {
 		Principal principal = new Principal();
 		principal.Login();
