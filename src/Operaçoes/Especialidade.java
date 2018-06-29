@@ -5,13 +5,13 @@ public class Especialidade {
 	private double Valor;
 	
 	public Especialidade() {
-		super();
+		
 	}
 	
 	
 
 	public Especialidade(String nome, double valor) {
-		super();
+		
 		Nome = nome;
 		Valor = valor;
 	}
