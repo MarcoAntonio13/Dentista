@@ -5,7 +5,7 @@ public class Fatura {
 	private Agendamento Agenda;
 	private double Valor;
 	
-	//Método Construtor devido a Composição
+	// Método Construtor devido a Composição
 	public Fatura(Agendamento agenda, double valor) {
 		Agenda = agenda;
 		Valor = valor;

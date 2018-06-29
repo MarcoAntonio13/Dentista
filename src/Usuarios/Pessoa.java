@@ -16,15 +16,15 @@ public class Pessoa {
 	public String getNome() {
 		return Nome;
 	}
-
+	
 	public void setNome(String nome) {
 		Nome = nome;
 	}
-
+	
 	public String getCPF() {
 		return CPF;
 	}
-
+	
 	public void setCPF(String cPF) {
 		CPF = cPF;
 	}
@@ -32,6 +32,5 @@ public class Pessoa {
 	public void editar(String nome) {
 		this.Nome = nome;
 	}
-	
 	
 }

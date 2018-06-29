@@ -3,7 +3,7 @@ package src.Usuarios;
 import java.util.Scanner;
 
 public class Dentista extends Pessoa {
-
+	
 	private String CRO;
 	
 	public Dentista(String nome, String cpf, String cro) {
@@ -14,9 +14,9 @@ public class Dentista extends Pessoa {
 	public String getCro() {
 		return CRO;
 	}
+	
 	public void setCro(String cro) {
 		CRO = cro;
 	}
-	
 	
 }

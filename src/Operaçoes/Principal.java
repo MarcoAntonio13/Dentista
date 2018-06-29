@@ -6,7 +6,7 @@ import src.Operaçoes.*;
 import java.util.Scanner;
 
 public class Principal {
-
+	
 	private static final String LOGIN = "admin";
 	private static final String SENHA = "123456";
 	private Dentista dentistas[];
@@ -17,7 +17,7 @@ public class Principal {
 	private int indiceDentistas = 0;
 	private int indiceEspecialidades = 0;
 	private int indiceFaturas = 0;
-
+	
 	public Principal() {
 		// TODO Auto-generated constructor stub
 		dentistas = new Dentista[100];
@@ -25,9 +25,7 @@ public class Principal {
 		especialidades = new Especialidade[100];
 		faturas = new Fatura[100];
 	}
-
 	
-
 	public void Login() {
 		String User;
 		String Pass;
@@ -37,7 +35,7 @@ public class Principal {
 		User = sc.nextLine();
 		System.out.println("Digite sua Senha:");
 		Pass = sc.nextLine();
-
+		
 		if (User.equals(LOGIN) && Pass.equals(SENHA)) {
 			System.out.println("Bem Vindo!!!");
 		} else {
@@ -51,7 +49,6 @@ public class Principal {
 		 * System.out.println("Consultório Odontológico\n");
 		 * System.out.println("Digite o seu Usuario"); User = sc.nextLine();
 		 * System.out.println("Digite a sua Senha"); Pass = sc.nextLine();
-		 * 
 		 * if(User.equals("admin") && Pass.equals("123")) {
 		 * System.out.println("Bem Vindo"); int op = 4; while(op != 0) {
 		 * System.out.println("[1] - Cadastrar Cliente");
@@ -62,12 +59,11 @@ public class Principal {
 		 * agenda.Agendar(cliente, dentista); fatura = new Fatura(agenda);
 		 * fatura.Gerar_Fatura(); break; } case 0:{ System.exit(0); continue; } default:
 		 * System.out.println("Número Digitado é Inválido"); } }
-		 * 
 		 * }else { System.out.println("Senha ou Usuário Inválidos...."); System.exit(0);
 		 * } sc.close();
 		 */
 	}
-
+	
 	public void menu() {
 		Scanner sc = new Scanner(System.in);
 		int op = 7;
@@ -84,61 +80,61 @@ public class Principal {
 			System.out.println("[0] - Sair");
 			op = sc.nextInt();
 			switch (op) {
-			case 1: {
-				System.out.println("Cadastro de Cliente");
-				cadastrarCliente();
-				break;
-			}
-			case 2: {
-				System.out.println("Cadastro de Dentista");
-				cadastrarDentista();
-				break;
-			}
-			case 3: {
-				System.out.println("Cadastro de Especialidade");
-				cadastrarEspecialidade();
-				break;
-			}
-			case 4: {
-				System.out.println("Agendamento de Consulta");
-				agendar();
-				break;
-			}
-			case 5: {
-				System.out.println("Listar Clientes ");
-				listarCliente();
-				break;
-			}
-			case 6: {
-				System.out.println("Listar Dentistas ");
-				listarDentista();
-				break;
-			}
-			case 7: {
-				System.out.println("Listar Faturas ");
-				listarFatura();
-				break;
-			}
-			case 8: {
-				System.out.println("Listar Especialidades ");
-				listarEspecialidades();
-				break;
-			}
-			case 9: {
-				System.out.println("Editar Clientes");
-				editarClientes();
-				break;
-			}
-			case 0: {
-				System.exit(0);
-				continue;
-			}
-			default:
-				System.out.println("Número digitado é Inválido");
+				case 1: {
+					System.out.println("Cadastro de Cliente");
+					cadastrarCliente();
+					break;
+				}
+				case 2: {
+					System.out.println("Cadastro de Dentista");
+					cadastrarDentista();
+					break;
+				}
+				case 3: {
+					System.out.println("Cadastro de Especialidade");
+					cadastrarEspecialidade();
+					break;
+				}
+				case 4: {
+					System.out.println("Agendamento de Consulta");
+					agendar();
+					break;
+				}
+				case 5: {
+					System.out.println("Listar Clientes ");
+					listarCliente();
+					break;
+				}
+				case 6: {
+					System.out.println("Listar Dentistas ");
+					listarDentista();
+					break;
+				}
+				case 7: {
+					System.out.println("Listar Faturas ");
+					listarFatura();
+					break;
+				}
+				case 8: {
+					System.out.println("Listar Especialidades ");
+					listarEspecialidades();
+					break;
+				}
+				case 9: {
+					System.out.println("Editar Clientes");
+					editarClientes();
+					break;
+				}
+				case 0: {
+					System.exit(0);
+					continue;
+				}
+				default:
+					System.out.println("Número digitado é Inválido");
 			}
 		}
 	}
-
+	
 	public void cadastrarCliente() {
 		Scanner sc = new Scanner(System.in);
 		String nome;
@@ -150,7 +146,7 @@ public class Principal {
 		cpf = sc.nextLine();
 		System.out.println("Digite o endereço do Cliente: ");
 		endereco = sc.nextLine();
-	
+		
 		clientes[indiceClientes] = new Cliente(nome, cpf, endereco);
 		indiceClientes++;
 	}
@@ -163,11 +159,11 @@ public class Principal {
 		nome = sc.nextLine();
 		System.out.println("Digite o valor da  Especialidade: ");
 		valor = sc.nextDouble();
-	
+		
 		especialidades[indiceEspecialidades] = new Especialidade(nome, valor);
 		indiceEspecialidades++;
 	}
-
+	
 	public void cadastrarDentista() {
 		Scanner sc = new Scanner(System.in);
 		String nome;
@@ -183,27 +179,27 @@ public class Principal {
 		dentistas[indiceDentistas] = new Dentista(nome, cpf, cro);
 		indiceDentistas++;
 	}
-
+	
 	public void gerarFatura(Agendamento agendamento) {
 		System.out.println("Fatura:");
-
+		
 		System.out.println("Cliente: " + agendamento.getCliente().getNome());
 		System.out.println("Dentista: " + agendamento.getDentista().getNome());
 		System.out.println("Data: " + agendamento.getData());
 		System.out.println("Valor: " + agendamento.getEspecialidade().getValor());
 		if (agendamento.getEspecialidade().getValor() > 500) {
 			faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() * 0.9);
-			System.out.println("Valor com desconto de 10%: "+faturas[indiceFaturas].getValor());
+			System.out.println("Valor com desconto de 10%: " + faturas[indiceFaturas].getValor());
 			indiceFaturas++;
 		}
 		
 		else {
-		faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor() );
+			faturas[indiceFaturas] = new Fatura(agendamento, agendamento.getEspecialidade().getValor());
 			indiceFaturas++;
 		}
-
+		
 	}
-
+	
 	public void agendar() {
 		Scanner sc = new Scanner(System.in);
 		int opcao;
@@ -226,13 +222,13 @@ public class Principal {
 		especialidade = especialidades[opcao];
 		System.out.println("Digite o dia da Consulta: ");
 		data = sc.next();
-		System.out.println("Voce Escolheu o dia:\n "+data);
+		System.out.println("Voce Escolheu o dia:\n " + data);
 		
 		agendamento = new Agendamento(cliente, dentista, data, especialidade);
 		gerarFatura(agendamento);
 		
 	}
-
+	
 	public void listarCliente() {
 		for (int i = 0; i < indiceClientes; i++) {
 			if (clientes[i] != null) {
@@ -240,7 +236,7 @@ public class Principal {
 			}
 		}
 	}
-
+	
 	public void listarEspecialidades() {
 		for (int i = 0; i < indiceEspecialidades; i++) {
 			if (especialidades[i] != null) {
@@ -257,12 +253,12 @@ public class Principal {
 				System.out.println("Dentista: " + faturas[v].getAgendamento().getDentista().getNome());
 				System.out.println("Data: " + faturas[v].getAgendamento().getData());
 				System.out.println("Valor final: " + faturas[v].getValor());
-
+				
 			}
-
+			
 		}
 	}
-
+	
 	public void listarDentista() {
 		for (int p = 0; p < indiceDentistas; p++) {
 			if (dentistas[p] != null) {
@@ -287,5 +283,5 @@ public class Principal {
 		principal.Login();
 		principal.menu();
 	}
-
+	
 }

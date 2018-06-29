@@ -14,8 +14,7 @@ public class Cliente extends Pessoa {
 		super(nome, cpf);
 		Endereco = endereco;
 	}
-
-
+	
 	public String getEndereco() {
 		return Endereco;
 	}
