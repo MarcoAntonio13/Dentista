@@ -224,9 +224,9 @@ public class Principal {
 		listarEspecialidades();
 		opcao = sc.nextInt();
 		especialidade = especialidades[opcao];
-		System.out.println("Digite o dia da consulta: ");
+		System.out.println("Digite o dia da Consulta: ");
 		data = sc.next();
-		System.out.println("Voce digitou: "+data);
+		System.out.println("Voce Escolheu o dia:\n "+data);
 		
 		agendamento = new Agendamento(cliente, dentista, data, especialidade);
 		gerarFatura(agendamento);
@@ -252,7 +252,7 @@ public class Principal {
 	public void listarFatura() {
 		for (int v = 0; v < indiceFaturas; v++) {
 			if (faturas[v] != null) {
-				System.out.println(v + ":");
+				System.out.println(v + ":\n");
 				System.out.println("Cliente: " + faturas[v].getAgendamento().getCliente().getNome());
 				System.out.println("Dentista: " + faturas[v].getAgendamento().getDentista().getNome());
 				System.out.println("Data: " + faturas[v].getAgendamento().getData());
