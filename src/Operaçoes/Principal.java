@@ -236,7 +236,7 @@ public class Principal {
 	public void listarCliente() {
 		for (int i = 0; i < indiceClientes; i++) {
 			if (clientes[i] != null) {
-				System.out.println(i + " " + clientes[i].getNome());
+				System.out.println(i + " " + clientes[i].getNome() + " | " + clientes[i].getEndereco());
 			}
 		}
 	}
