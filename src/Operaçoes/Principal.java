@@ -81,8 +81,6 @@ public class Principal {
 			System.out.println("[7] - Listar Faturas");
 			System.out.println("[8] - Listar Especialidades");
 			System.out.println("[9] - Editar Clientes");
-			System.out.println("[10] - Editar Dentistas");
-			System.out.println("[11] - Editar Especialidades");
 			System.out.println("[0] - Sair");
 			op = sc.nextInt();
 			switch (op) {
@@ -128,14 +126,7 @@ public class Principal {
 			}
 			case 9: {
 				System.out.println("Editar Clientes");
-				break;
-			}
-			case 10: {
-				System.out.println("Editar Dentistas");
-				break;
-			}
-			case 11: {
-				System.out.println("Editar Especialidades");
+				editarClientes();
 				break;
 			}
 			case 0: {
@@ -261,7 +252,11 @@ public class Principal {
 	public void listarFatura() {
 		for (int v = 0; v < indiceFaturas; v++) {
 			if (faturas[v] != null) {
-				System.out.println(v + " " + faturas[v].getValor());
+				System.out.println(v + ":");
+				System.out.println("Cliente: " + faturas[v].getAgendamento().getCliente().getNome());
+				System.out.println("Dentista: " + faturas[v].getAgendamento().getDentista().getNome());
+				System.out.println("Data: " + faturas[v].getAgendamento().getData());
+				System.out.println("Valor final: " + faturas[v].getValor());
 
 			}
 
@@ -274,6 +269,17 @@ public class Principal {
 				System.out.println(p + " " + dentistas[p].getNome());
 			}
 		}
+	}
+	
+	public void editarClientes() {
+		Scanner sc = new Scanner(System.in);
+		int opcao;
+		System.out.println("Escolha o cliente: ");
+		listarCliente();
+		opcao = sc.nextInt();
+		System.out.println("Digite o novo endereço: ");
+		clientes[opcao].editar(sc.next());
+		System.out.println("Cliente editado com sucesso!");
 	}
 
 	public static void main(String[] args) {

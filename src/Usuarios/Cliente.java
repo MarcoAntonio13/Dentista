@@ -19,9 +19,6 @@ public class Cliente extends Pessoa {
 	public String getEndereco() {
 		return Endereco;
 	}
-	public void setEndereco(String endereco) {
-		Endereco = endereco;
-	}
 	
 	@Override
 	public void editar(String endereco) {
